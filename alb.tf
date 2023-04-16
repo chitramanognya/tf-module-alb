@@ -5,7 +5,7 @@ resource "aws_lb" "main" {
   subnets            = var.subnets
 
   enable_deletion_protection = var.enable_deletion_protection
-  security_roups = [aws_security_group.main.id]
+  security_groups = [aws_security_group.main.id]
 
   tags = merge(
     var.tags, 
